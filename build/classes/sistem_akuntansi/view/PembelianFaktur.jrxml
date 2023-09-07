@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cce56f0-9b12-4106-ade9-70bebe17aa65">
+	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="kode_pbf" class="java.lang.String"/>
+	<field name="nama_pbf" class="java.lang.String"/>
+	<field name="no_faktur" class="java.lang.String"/>
+	<field name="tanggal" class="java.util.Date"/>
+	<field name="detail_nomor" class="java.lang.Integer"/>
+	<field name="detail_kode_obat" class="java.lang.String"/>
+	<field name="detail_nama_obat" class="java.lang.String"/>
+	<field name="detail_exp_date" class="java.util.Date"/>
+	<field name="detail_kuantiti" class="java.lang.Integer"/>
+	<field name="detail_harga" class="java.lang.Integer"/>
+	<field name="detail_jumlah" class="java.lang.Integer"/>
+	<field name="total" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="48" y="0" width="193" height="20" uuid="48c7087f-6f04-4b1c-b91c-c150ad6a193c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[APOTEK MULYO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="20" width="193" height="20" uuid="616f1900-090e-4d03-a744-cbc343c07a67"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Raya Wonokerto Bandar Batang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="0" width="314" height="20" uuid="71ec6f71-bb0a-469e-b2c3-9a290642ab01"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FAKTUR PEMBELIAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="40" width="193" height="20" uuid="ef38949d-faf8-49be-acdd-e5466f4690f8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[APA : Apt. Intan Irawan, S.Farm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="59" width="193" height="20" uuid="96dfb9a5-37b6-4b28-8d82-4a07968bcc92"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[SIPA : 446/013/2022]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="48" height="79" uuid="09f5d334-d11f-4368-8437-b2491aa0f3dd"/>
+				<imageExpression><![CDATA["D:\\semester 4\\Pemprograman Akuntansi 2\\APOTEK MULYO\\Apotek_mulyo\\build\\classes\\sistem_akuntansi\\img\\LOGO APOTEK MULYO.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="65f69058-efea-4fb2-9782-1c3626de2cd3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="555" height="1" uuid="73a8c2ad-5faa-4027-94f7-fa7eae4a630a"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="2" width="65" height="20" uuid="75b6b3e3-12ae-4ce5-b13e-1e5c4d037cde"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kode PBF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="65" height="20" uuid="4d59b03b-5338-40a5-a334-c4dba74ac104"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nama PBF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="2" width="0" height="20" uuid="6a0d9c1b-054d-4477-91ee-83f4c9486b36"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="22" width="0" height="20" uuid="1f534689-312d-4a4b-87be-528981bbd7d8"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="3" width="160" height="20" uuid="7324e642-afd4-49c4-b9c4-d5d2503f85e5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode_pbf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="23" width="160" height="20" uuid="a9c96fc1-ee9f-4a70-9036-145a7c3338e1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_pbf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="3" width="54" height="20" uuid="27700142-5a86-4ba2-8462-ec59a54cd4b7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[No Faktur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="23" width="54" height="20" uuid="7ae5cf79-faec-42b6-a300-cb4d46cd1255"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="3" width="0" height="20" uuid="cb3ce4b9-ffe2-4708-9c11-d330125fe278"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="448" y="23" width="0" height="20" uuid="52905aa2-869a-4408-ad44-7f8e8023554c"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="3" width="100" height="20" uuid="8f85fa2d-ad23-4c2d-99bb-bdab47b07b87"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_faktur}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="23" width="100" height="20" uuid="d640fdb7-186b-4f57-98e4-c5a242a1cb15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="17" height="20" uuid="522ce629-9be3-4742-a5f9-8b25b5d51664"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="0" width="69" height="20" uuid="8ab62cf8-2fed-4dd9-a4a1-f020c04c66ad"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="0" width="109" height="20" uuid="79dbc258-3882-4a0c-907e-47f4263cf95f"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Obat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="0" width="100" height="20" uuid="db6863c7-e504-4033-8791-1359f24c80e9"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exp Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="0" width="55" height="20" uuid="35b12908-a3b1-499e-a044-d50a0e45dad4"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kuantiti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="86" height="20" uuid="418c9fb4-6d15-4852-af9c-1b2fd9f328eb"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="436" y="0" width="119" height="20" uuid="b199a4ce-311d-4a2c-99ca-a39dce0ea9bc"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="17" height="20" uuid="e6e72e55-a2c9-4f65-8256-df49c29f5b42"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_nomor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="0" width="69" height="20" uuid="41e02d31-2489-45a9-bd30-b0d1b119a31b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_kode_obat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="0" width="109" height="20" uuid="c7712766-c2ad-4307-8a37-1102513b23b6"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_nama_obat}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="195" y="0" width="100" height="20" uuid="3c6b87d4-a9d9-4a04-8b72-45a19561e8f3"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_exp_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="55" height="20" uuid="f977d0b0-71bb-4ff7-9557-731a695c9e6f"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_kuantiti}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="350" y="0" width="86" height="20" uuid="3c4f5997-a5a6-493d-9359-7ca867029342"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_harga}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="436" y="0" width="119" height="20" uuid="110c82cb-f783-4702-a6b7-0f895e63b956"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{detail_jumlah}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="436" height="20" uuid="28a87de7-1e32-478e-bfae-9e3e5abfb399"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total : ]]></text>
+			</staticText>
+			<textField pattern="#,##0">
+				<reportElement x="436" y="0" width="119" height="20" uuid="863b0989-e83c-4a61-b65e-45a4871cab97"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
